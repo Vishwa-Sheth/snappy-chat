@@ -8,7 +8,7 @@ html, body {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-body{
+body.homepage{
   background-image: url("bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,6 +29,8 @@ margin-top: 0;
 .tagline{
   color: white;
   font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .button{
   background-color: blueviolet;
@@ -41,4 +43,86 @@ margin-top: 0;
 .button:hover{
   background-color: white;
   color: blueviolet;
+}
+/*
+chat page
+*/
+.member-area{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  background-color: black;
+  color: pink;
+}
+.user-info{
+  background-color: gray;
+padding: 10px;
+}
+.logout{
+  float: right;
+  cursor: pointer;
+}
+.member{
+  padding: 10px;
+  border-bottom: solid 1px white;
+  cursor: pointer;
+}
+.member:hover{
+  background: pink;
+  color: black;
+}
+.message-area{
+  background-color: pink;
+  position: fixed;
+  left: 30%;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+}
+.chat-info{
+  background-color: lightblue;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+}
+.member.active{
+  font-weight: bold;
+  font-style: italic;
+  background-color: pink;
+  color: black;
+}
+.messages{
+  background: pink;
+  height: 80%;
+  padding: 10px;
+  overflow:auto;
+}
+.message{
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.message.by-user{
+  background-color: azure;
+  color: black;
+}
+.chat-form{
+  position: fixed;
+  left: 30%;
+  bottom: 0;
+  width: 70%;
+  background-color: lightblue;
+  padding: 20px;
+}
+.chat-message{
+  border: solid 1px darkgrey;
+  border-radius: 4px;
+  padding: 10px;
+  display:block;
+  width: 100%;
 }
