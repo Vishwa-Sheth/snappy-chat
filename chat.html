@@ -10,70 +10,46 @@
 <body>
   <div class="member-area">
      <div class="user-info">
-     Vishwa Sheth
+     <span id="username"></span>
      <span class="logout">Log out</span>
   </div>
-  <div class="members">
-    <div class="member">
-      Hilloni
-    </div>
-    <div class="member">
-      Parita
-    </div>
-    <div class="member">
-      Vanshika
-    </div>
-    <div class="member">
-      Shaurya Bhai
-    </div>
-    <div class="member">
-      Mummy
-    </div>
-    <div class="member active">
-      Daddy
-    </div>
+  <div class="members" id="members">
+
   </div>
 </div>
   <div class="message-area">
 <div class="chat-info">
   Daddy
 </div>
-<div class="messages">
-<div class="message">
-  Hii
-</div>
-<div class="message by-user">
-  Hello
-</div><div class="message">
-What are you learning?
-</div><div class="message by-user">
-    Learning html and css.
-</div>
-<div class="message">
-  Hii
-</div>
-<div class="message by-user">
-  Hello
-</div><div class="message">
-What are you learning?
-</div><div class="message by-user">
-    Learning html and css.
-</div>
-<div class="message">
-  Hii
-</div>
-<div class="message by-user">
-  Hello
-</div><div class="message">
-What are you learning?
-</div><div class="message by-user">
-    Learning html and css.
-</div>
+<div class="messages" id="messages">
+
 </div>
 <div class="chat-form">
-  <input type="text" class="chat-message"
+  <input type="hidden" id="chat_id"/>
+  <input id="message-text" type="text" class="chat-message"
   placeholder="Write your message and press enter.."/>
+  <button id="send-button">Send</button>
 </div>
   </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA4ao3wLXshATsFnNqa3NwPryjVUVyWuyo",
+      authDomain: "snappy-chat-b5e00.firebaseapp.com",
+      databaseURL: "https://snappy-chat-b5e00.firebaseio.com",
+      storageBucket: "snappy-chat-b5e00.appspot.com",
+      messagingSenderId: "416260584637"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script type="text/javascript" src="functions.js">
+  </script>
+  <script type="text/javascript" src="app.js">
+  </script>
+  <script type="text/javascript" src="chat.js">
+  </script>
 </body>
 </html>
