@@ -68,7 +68,7 @@ function updateUserData(){
   var usernameElement = getElement("username");
 
   usernameElement.textContent = window.currentUser.name;
-}
+};
 function loadUsers(fn){
 
 var database = firebase.database();
@@ -79,7 +79,7 @@ usersRef.on('value',function (snapshot){
 
   fn(users);
 });
-}
+};
 
 function renderUser(user){
   var uid = user.id;
@@ -96,6 +96,7 @@ function getChatId(id1 , id2){
 
     return id2 +""+ id1;
 }
+};
 function onClickMultiple(className, func) {
     document.addEventListener('click', function(event) {
         if (event.target.classList.contains(className)) {
@@ -112,7 +113,7 @@ function loadMessages(chat_id,fn){
     var messages = snapshot.val();
     fn(messages);
   });
-}
+};
 
 
 

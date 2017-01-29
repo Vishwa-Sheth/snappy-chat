@@ -6,14 +6,13 @@ loadUsers(function(users){
   var usersList = "";
   for (var uid in users){
     var user = users[uid];
-alert(uid+" "+window.currentUser.id);
+//alert(uid+" "+window.currentUser.id);
 // if the user is not the current user
     if(window.currentUser.id != uid){
     usersList += renderUser(user);
   }
 }
   getElement("members").innerHTML = usersList;
-});
 });
  onClickMultiple("member", function(element){
    var chat_id = element.id;
@@ -40,4 +39,5 @@ click("send-button",function(){
 
 var chat_id = getElement("chat_id").value;
 sendMessage(chat_id,text);
+});
 });
